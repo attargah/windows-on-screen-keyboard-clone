@@ -1,0 +1,313 @@
+body {
+  background-color: darkslategrey;
+  padding: 20px;
+  place-items: center;
+}
+body form {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.keyboard-top-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #bcbfbf;
+}
+.keyboard-top-bar .keyboard-top-bar-right {
+  padding: 2px 10px 0 0;
+}
+.keyboard-top-bar .keyboard-top-bar-right .keyboard-close-button {
+  width: 30px;
+  text-align-last: center;
+  padding: 5px;
+}
+.keyboard-top-bar .keyboard-top-bar-right .keyboard-close-button:hover {
+  background-color: #e5e5e5;
+}
+.keyboard-top-bar .keyboard-top-bar-right .keyboard-close-button img {
+  margin-top: 5px;
+  width: 15px;
+}
+.keyboard-top-bar .keyboard-top-bar-left {
+  padding: 0 10px 0 5px;
+}
+.keyboard-top-bar .keyboard-top-bar-left .keyboard-top-bar-items {
+  display: flex;
+}
+.keyboard-top-bar .keyboard-top-bar-left .keyboard-top-bar-items .keyboard-top-bar-item {
+  margin-left: 5px;
+  text-align-last: center;
+  width: 40px;
+}
+.keyboard-top-bar .keyboard-top-bar-left .keyboard-top-bar-items .keyboard-top-bar-item:hover {
+  background-color: #e5e5e5;
+}
+.keyboard-top-bar .keyboard-top-bar-left .keyboard-top-bar-items .keyboard-top-bar-item img {
+  margin-top: 5px;
+  width: 25px;
+}
+
+.keyboard {
+  background-color: #bcbfbf;
+  padding: 0 5px 5px 5px;
+  width: 700px;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  font-weight: 370;
+  align-content: flex-end;
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f1f1f1;
+}
+.keyboard img {
+  width: 100%;
+  height: 25px;
+  object-fit: contain;
+  pointer-events: none;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+.keyboard::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.keyboard::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.keyboard::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.keyboard::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.keyboard::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.keyboard::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.keyboard::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+}
+.keyboard::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.keyboard-row .keyboard-button {
+  width: 20%;
+  height: 30px;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  margin: 3px;
+  cursor: default;
+  align-content: center;
+  position: relative;
+}
+.keyboard-row .keyboard-button:hover:not(.button-disable, .key-button-disable) {
+  background-color: #c9c9cb !important;
+}
+.keyboard-row .keyboard-button:active:not(.button-disable, .key-button-disable) {
+  background-color: #cc3629 !important;
+}
+.keyboard-row .keyboard-button.keyboard-button-active:not(.button-disable, .key-button-disable) {
+  background-color: #cc3629 !important;
+}
+.keyboard-row .keyboard-button.button-disable, .keyboard-row .keyboard-button.key-button-disable {
+  color: #888888;
+}
+.keyboard-row .keyboard-button.button-disable img, .keyboard-row .keyboard-button.key-button-disable img {
+  opacity: 0.2;
+}
+.keyboard-row .keyboard-button-focus {
+  background-color: #c9c9cb !important;
+}
+.keyboard-row .keyboard-ctrl-button {
+  background-color: #e5e5e5;
+  font-size: 17px;
+}
+.keyboard-row .keyboard-emoji-button, .keyboard-row .keyboard-sign-button {
+  background-color: #e5e5e5;
+}
+.keyboard-row .keyboard-emoji-button img, .keyboard-row .keyboard-sign-button img {
+  height: 20px;
+}
+.keyboard-row .keyboard-symbols-button {
+  background-color: #e5e5e5;
+  font-size: 15px;
+}
+.keyboard-row .keyboard-letter-button {
+  background-color: #e5e5e5;
+}
+.keyboard-row .keyboard-empty-button {
+  background-color: #e5e5e5;
+}
+.keyboard-row .keyboard-left-button {
+  background-color: #e5e5e5;
+}
+.keyboard-row .keyboard-right-button {
+  background-color: #e5e5e5;
+}
+.keyboard-row .keyboard-shift-button {
+  background-color: #e5e5e5;
+}
+.keyboard-row .keyboard-shift-button img {
+  height: 20px;
+}
+.keyboard-row .keyboard-divider {
+  padding: 10px;
+  background-color: #bcbfbf;
+}
+.keyboard-row .ctrl-event-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 5px;
+  font-size: 9px;
+  z-index: 1;
+}
+
+#defaultKeyboard .keyboard-delete-button {
+  width: 40%;
+}
+#defaultKeyboard .keyboard-enter-button {
+  width: 30%;
+}
+#defaultKeyboard .keyboard-space-button {
+  width: 120%;
+}
+
+#symbolKeyboard .keyboard-tab-button, #symbolKeyboard .keyboard-delete-button {
+  background-color: #e5e5e5;
+}
+#symbolKeyboard .keyboard-space-button, #symbolKeyboard .keyboard-zero-button {
+  width: 55%;
+}
+#symbolKeyboard .keyboard-enter-button {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 999;
+  background-color: #e5e5e5;
+}
+#symbolKeyboard .keyboard-prev-button, #symbolKeyboard .keyboard-next-button {
+  background-color: #e5e5e5;
+}
+#symbolKeyboard .keyboard-prev-button img, #symbolKeyboard .keyboard-next-button img {
+  height: 20px;
+}
+
+#emojiKeyboard, #signKeyboard {
+  min-height: 200px;
+}
+#emojiKeyboard img, #signKeyboard img {
+  margin-bottom: unset;
+}
+#emojiKeyboard .section-active, #signKeyboard .section-active {
+  background-color: #cc3629 !important;
+}
+#emojiKeyboard .keyboard-row, #signKeyboard .keyboard-row {
+  justify-content: flex-start;
+  overflow-x: auto;
+  line-height: 0;
+}
+#emojiKeyboard .keyboard-row .face-button-up-arrow, #signKeyboard .keyboard-row .face-button-up-arrow {
+  display: none;
+}
+#emojiKeyboard .keyboard-row .keyboard-section-button[multiply].section-active img, #signKeyboard .keyboard-row .keyboard-section-button[multiply].section-active img {
+  margin-top: -7px;
+}
+#emojiKeyboard .keyboard-row .keyboard-section-button[multiply].section-active .face-button-up-arrow, #signKeyboard .keyboard-row .keyboard-section-button[multiply].section-active .face-button-up-arrow {
+  display: block;
+  position: relative;
+  bottom: 5px;
+}
+#emojiKeyboard .keyboard-row .keyboard-section-button[multiply].section-active .face-button-up-arrow img, #signKeyboard .keyboard-row .keyboard-section-button[multiply].section-active .face-button-up-arrow img {
+  height: 14px;
+}
+#emojiKeyboard .keyboard-row .keyboard-delete-button, #signKeyboard .keyboard-row .keyboard-delete-button {
+  background-color: #e5e5e5;
+}
+#emojiKeyboard .keyboard-row .keyboard-row-column, #signKeyboard .keyboard-row .keyboard-row-column {
+  width: 10%;
+}
+#emojiKeyboard .keyboard-row .keyboard-row-column div, #signKeyboard .keyboard-row .keyboard-row-column div {
+  width: 50px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  font-size: 30px;
+  border: 1px solid transparent;
+}
+#emojiKeyboard .keyboard-row .keyboard-row-column div:hover, #signKeyboard .keyboard-row .keyboard-row-column div:hover {
+  border: 1px solid #9c9c9c;
+  background-color: #b1b1b1 !important;
+}
+
+.emoji-colors-row {
+  display: none;
+  background-color: #bcbfbf;
+  position: absolute;
+  transform: translate(64%, -100%);
+}
+.emoji-colors-row.color-active {
+  display: flex;
+}
+.emoji-colors-row div {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+}
+.emoji-colors-row div.emoji-color-yellow {
+  background-color: #ffc83d;
+}
+.emoji-colors-row div.emoji-color-yellow.color-active {
+  border: 5px solid #ffe9b1;
+}
+.emoji-colors-row div.emoji-color-white {
+  background-color: #f7d7c4;
+}
+.emoji-colors-row div.emoji-color-white.color-active {
+  border: 5px solid #fcefe7;
+}
+.emoji-colors-row div.emoji-color-light {
+  background-color: #d8b094;
+}
+.emoji-colors-row div.emoji-color-light.color-active {
+  border: 5px solid #efdfd4;
+}
+.emoji-colors-row div.emoji-color-cream {
+  background-color: #d8b094;
+}
+.emoji-colors-row div.emoji-color-cream.color-active {
+  border: 5px solid #e4d3c2;
+}
+.emoji-colors-row div.emoji-color-brown {
+  background-color: #8e562e;
+}
+.emoji-colors-row div.emoji-color-brown.color-active {
+  border: 5px solid #d2bbab;
+}
+.emoji-colors-row div.emoji-color-dark {
+  background-color: #603d30;
+}
+.emoji-colors-row div.emoji-color-dark.color-active {
+  border: 5px solid #bfb1ac;
+}
+.emoji-colors-row div.color-active {
+  width: 40px;
+  height: 40px;
+}
+
+/*# sourceMappingURL=onscreenkeyboard-windows.css.map */

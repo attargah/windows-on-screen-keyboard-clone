@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Windows On Screen Keyboard Clone</title>
+    <link rel="icon" href="assets/images/windows.ico">
+    <link rel="stylesheet" href="assets/css/onscreenkeyboard-windows.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+</head>
+<body>
+<input type="text">
+<input type="text">
+<br>
+<br>
+<form action="" style="color: white">
+    <label for="forminput">Form Input :</label>
+    <br>
+    <br>
+    <input name="input" type="text" id="forminput">
+<br>
+<br>
+    <label for="formtextarea">Form TextArea :</label>
+    <br>
+    <br>
+    <textarea name="textarea" id="formtextarea" cols="30" rows="10"></textarea>
+
+
+    <button type="button" data-target-keyboard="mainKeyboard">Open Screen Keyboard</button>
+</form>
+
+
+
+
+<br>
+<br>
+
+<div class="main-keyboard" data-keyboard="hide" id="mainKeyboard">
+    <div class="keyboard-top-bar">
+        <div class="keyboard-top-bar-left">
+            <div class="keyboard-top-bar-items">
+                <div class="keyboard-top-bar-item keyboard-settings-key">
+                    <img src="assets/images/keyboard.png">
+                </div>
+                <div class="keyboard-top-bar-item keyboard-mic-key">
+                    <img src="assets/images/ux.png">
+                </div>
+            </div>
+        </div>
+        <div class="keyboard-top-bar-right">
+            <div class="keyboard-close-button">
+                <img src="assets/images/close.png" >
+            </div>
+
+        </div>
+
+    </div>
+    <div class="keyboard" id="defaultKeyboard">
+        <div class="keyboard-row">
+            <div class="keyboard-button key-button" data-key="q" data-shift-key="Q">q</div>
+            <div class="keyboard-button key-button" data-key="w" data-shift-key="W">w</div>
+            <div class="keyboard-button key-button" data-key="e" data-shift-key="E">e</div>
+            <div class="keyboard-button key-button" data-key="r" data-shift-key="R">r</div>
+            <div class="keyboard-button key-button" data-key="t" data-shift-key="T">t</div>
+            <div class="keyboard-button key-button" data-key="y" data-shift-key="Y">y</div>
+            <div class="keyboard-button key-button" data-key="u" data-shift-key="U">u</div>
+            <div class="keyboard-button key-button" data-key="i" data-shift-key="I">i</div>
+            <div class="keyboard-button key-button" data-key="o" data-shift-key="O">o</div>
+            <div class="keyboard-button key-button" data-key="p" data-shift-key="P">p</div>
+            <div class="keyboard-button keyboard-delete-button"><img src="assets/images/delete.png"></div>
+        </div>
+        <div class="keyboard-row">
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button key-button" data-key="a" data-shift-key="A" data-ctrl-event="Select All">a</div>
+            <div class="keyboard-button key-button" data-key="s" data-shift-key="S">s</div>
+            <div class="keyboard-button key-button" data-key="d" data-shift-key="D">d</div>
+            <div class="keyboard-button key-button" data-key="f" data-shift-key="F">f</div>
+            <div class="keyboard-button key-button" data-key="g" data-shift-key="G">g</div>
+            <div class="keyboard-button key-button" data-key="h" data-shift-key="H">h</div>
+            <div class="keyboard-button key-button" data-key="j" data-shift-key="J">j</div>
+            <div class="keyboard-button key-button" data-key="k" data-shift-key="K">k</div>
+            <div class="keyboard-button key-button" data-key="l" data-shift-key="L">l</div>
+            <div class="keyboard-button key-button" data-key="'">'</div>
+            <div class="keyboard-button keyboard-enter-button"><img src="assets/images/enter.png"></div>
+        </div>
+        <div class="keyboard-row">
+            <div class="keyboard-button keyboard-shift-button"><img src="assets/images/up-arrow.png"></div>
+            <div class="keyboard-button key-button" data-key="z" data-shift-key="Z" data-ctrl-event="Undo">z</div>
+            <div class="keyboard-button key-button" data-key="x" data-shift-key="X" data-ctrl-event="Cut">x</div>
+            <div class="keyboard-button key-button" data-key="c" data-shift-key="C" data-ctrl-event="Copy">c</div>
+            <div class="keyboard-button key-button" data-key="v" data-shift-key="V" data-ctrl-event="Paste">v</div>
+            <div class="keyboard-button key-button" data-key="b" data-shift-key="B">b</div>
+            <div class="keyboard-button key-button" data-key="n" data-shift-key="N">n</div>
+            <div class="keyboard-button key-button" data-key="m" data-shift-key="M">m</div>
+            <div class="keyboard-button key-button" data-key=",">,</div>
+            <div class="keyboard-button key-button" data-key=".">.</div>
+            <div class="keyboard-button key-button" data-key="?">?</div>
+            <div class="keyboard-button keyboard-shift-button"><img src="assets/images/up-arrow.png"></div>
+        </div>
+        <div class="keyboard-row">
+            <div class="keyboard-button keyboard-symbols-button">&123</div>
+            <div class="keyboard-button keyboard-ctrl-button">Ctrl</div>
+            <div class="keyboard-button keyboard-emoji-button"><img src="assets/images/happiness.png"></div>
+            <div class="keyboard-button keyboard-space-button"></div>
+            <div class="keyboard-button keyboard-left-button"><img src="assets/images/left-chevron.png"></div>
+            <div class="keyboard-button keyboard-right-button"><img src="assets/images/right-chevron.png"></div>
+            <div class="keyboard-button keyboard-empty-button">ENG</div>
+        </div>
+    </div>
+    <div class="keyboard" id="symbolKeyboard">
+        <div class="keyboard-row">
+            <div class="keyboard-button keyboard-tab-button">Tab</div>
+
+            <!-- FIRST PANEL START -->
+            <div class="keyboard-button key-button" data-panel="1" data-key="!">!</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="@">@</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="#">#</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="$">$</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="%">%</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="&">&</div>
+            <!-- FIRST PANEL END -->
+
+            <!-- SECOND PANEL START -->
+            <div class="keyboard-button key-button" data-panel="2" data-key="•">•</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="©">©</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="€">€</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="£">£</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="µ">µ</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="½">½</div>
+            <!-- SECOND PANEL END -->
+
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button key-button" data-key="1">1</div>
+            <div class="keyboard-button key-button" data-key="2">2</div>
+            <div class="keyboard-button key-button" data-key="3">3</div>
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button keyboard-delete-button"><img src="assets/images/delete.png"></div>
+        </div>
+        <div class="keyboard-row">
+            <div class="keyboard-button keyboard-prev-button button-disable">
+                <img src="assets/images/chevron-left.png">
+            </div>
+
+            <!-- FIRST PANEL START -->
+            <div class="keyboard-button key-button" data-panel="1" data-key="(">(</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key=")">)</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="-">-</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="_">_</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="=">=</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="+">+</div>
+            <!-- FIRST PANEL END -->
+
+            <!-- SECOND PANEL START -->
+            <div class="keyboard-button key-button" data-panel="2" data-key="<"><</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key=">">></div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="[">[</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="]">]</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="{">{</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="}">}</div>
+            <!-- SECOND PANEL END -->
+
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button key-button" data-key="4">4</div>
+            <div class="keyboard-button key-button" data-key="5">5</div>
+            <div class="keyboard-button key-button" data-key="6">6</div>
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button"></div>
+            <div class="keyboard-button keyboard-enter-button"><img src="assets/images/enter.png"></div>
+        </div>
+        <div class="keyboard-row">
+            <div class="keyboard-button keyboard-next-button">
+                <img src="assets/images/chevron-right.png">
+            </div>
+
+            <!-- FIRST PANEL START -->
+            <div class="keyboard-button key-button" data-panel="1" data-key="\">\</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key=";">;</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key=":">:</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key='"'>"</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="*">*</div>
+            <div class="keyboard-button key-button" data-panel="1" data-key="/">/</div>
+            <!-- FIRST PANEL END -->
+
+            <!-- SECOND PANEL START -->
+            <div class="keyboard-button key-button" data-panel="2" data-key="|">|</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="¦">¦</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="¶">¶</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="°">°</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="~">~</div>
+            <div class="keyboard-button key-button" data-panel="2" data-key="^">^</div>
+            <!-- SECOND PANEL END -->
+
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button key-button" data-key="7">7</div>
+            <div class="keyboard-button key-button" data-key="8">8</div>
+            <div class="keyboard-button key-button" data-key="9">9</div>
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button"></div>
+        </div>
+        <div class="keyboard-row">
+            <div class="keyboard-button keyboard-letter-button">abc</div>
+            <div class="keyboard-button keyboard-ctrl-button">Ctrl</div>
+            <div class="keyboard-button keyboard-sign-button"><img src="assets/images/horsehoe.png"></div>
+            <div class="keyboard-button keyboard-left-button"><img src="assets/images/left-chevron.png"></div>
+            <div class="keyboard-button keyboard-right-button"><img src="assets/images/right-chevron.png"></div>
+            <div class="keyboard-button keyboard-space-button">Space</div>
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button key-button keyboard-zero-button" data-key="0">0</div>
+            <div class="keyboard-button key-button" data-key=",">,</div>
+            <div class="keyboard-divider"></div>
+            <div class="keyboard-button keyboard-empty-button">ENG</div>
+        </div>
+    </div>
+    <div class="keyboard" data-section-id="1" id="emojiKeyboard">
+        <div data-section="recent" class="keyboard-row"></div>
+        <div data-section="smile" class="keyboard-row"></div>
+        <div data-section="face-yellow" class="keyboard-row"></div>
+        <div data-section="face-white" class="keyboard-row"></div>
+        <div data-section="face-light" class="keyboard-row"></div>
+        <div data-section="face-cream" class="keyboard-row"></div>
+        <div data-section="face-brown" class="keyboard-row"></div>
+        <div data-section="face-dark" class="keyboard-row"></div>
+        <div data-section="balloon" class="keyboard-row"></div>
+        <div data-section="food" class="keyboard-row"></div>
+        <div data-section="vehicle" class="keyboard-row"></div>
+        <div data-section="symbol" class="keyboard-row"></div>
+        <div data-section="sign" class="keyboard-row"></div>
+        <div class="keyboard-row">
+            <div class="keyboard-button keyboard-symbols-button">&123</div>
+            <div class="keyboard-button keyboard-letter-button">abc</div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="recent">
+                <img src="assets/images/clock.png"></div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="smile"><img
+                    src="assets/images/smile.png"></div>
+            <div class="emoji-colors-row">
+                <div class="emoji-color-yellow color-button keyboard-section-button" data-target-section="face-yellow"></div>
+                <div class="emoji-color-white color-button keyboard-section-button" data-target-section="face-white"></div>
+                <div class="emoji-color-light color-button keyboard-section-button" data-target-section="face-light"></div>
+                <div class="emoji-color-cream color-button keyboard-section-button" data-target-section="face-cream"></div>
+                <div class="emoji-color-brown color-button keyboard-section-button" data-target-section="face-brown"></div>
+                <div class="emoji-color-dark color-button keyboard-section-button" data-target-section="face-dark"></div>
+            </div>
+            <div class="keyboard-button keyboard-section-button" multiply data-target-section="face-yellow">
+
+                <div class="face-button-up-arrow">
+                    <img src="assets/images/upload.png">
+                </div>
+                <img src="assets/images/smiling-girl.png">
+            </div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="balloon"><img
+                    src="assets/images/balloon.png"></div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="food"><img
+                    src="assets/images/pizza-slice.png"></div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="vehicle"><img
+                    src="assets/images/car.png"></div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="symbol"><img
+                    src="assets/images/love.png"></div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="sign">;-)</div>
+            <div class="keyboard-button keyboard-delete-button"><img src="assets/images/delete.png"></div>
+            <div class="keyboard-button keyboard-empty-button">ENG</div>
+        </div>
+    </div>
+    <div class="keyboard" id="signKeyboard" data-section-id="2">
+        <div data-section="recent" class="keyboard-row"></div>
+        <div data-section="marks" class="keyboard-row"></div>
+        <div data-section="specials" class="keyboard-row"></div>
+        <div data-section="letters" class="keyboard-row"></div>
+        <div data-section="directions" class="keyboard-row"></div>
+        <div data-section="maths" class="keyboard-row"></div>
+        <div data-section="pointers" class="keyboard-row"></div>
+        <div data-section="scripts" class="keyboard-row"></div>
+        <div class="keyboard-row">
+            <div class="keyboard-button keyboard-symbols-button">&123</div>
+            <div class="keyboard-button keyboard-letter-button">abc</div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="recent">
+                <img src="assets/images/clock.png"></div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="marks"><</div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="specials">$</div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="letters">Ç</div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="directions">⇄</div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="maths">∞</div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="pointers">⨀</div>
+            <div class="keyboard-button keyboard-section-button" data-target-section="scripts">Ω</div>
+            <div class="keyboard-button keyboard-delete-button"><img src="assets/images/delete.png"></div>
+            <div class="keyboard-button keyboard-empty-button">ENG</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<script src="assets/js/main.js"></script>
+</html>

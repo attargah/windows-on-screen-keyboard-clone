@@ -1,0 +1,429 @@
+$keyboardButtonColor: #ffffff;
+$keyboardButtonHoverColor: #c9c9cb;
+$keyboardButtonClickColor: #cc3629;
+$keyboardButtonWidth: 20%;
+$keyboardButtonHeight: 30px;
+$keyboardColor: #bcbfbf;
+$keyboardSpecialButtonColor: #e5e5e5;
+$keyboardWidth: 700px;
+
+
+body {
+  background-color: darkslategrey;
+  padding: 20px;
+  place-items: center;
+
+  form {
+    border: 1px solid black;
+    padding: 20px;
+  }
+
+}
+
+.keyboard-top-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $keyboardColor;
+
+  .keyboard-top-bar-right {
+    padding: 2px 10px 0 0;
+
+    .keyboard-close-button {
+      width: 30px;
+      text-align-last: center;
+      padding: 5px;
+
+      &:hover {
+        background-color: $keyboardSpecialButtonColor;
+      }
+
+      img {
+        margin-top: 5px;
+        width: 15px;
+      }
+
+    }
+  }
+
+  .keyboard-top-bar-left {
+    padding: 0 10px 0 5px;
+
+    .keyboard-top-bar-items {
+      display: flex;
+
+      .keyboard-top-bar-item {
+        margin-left: 5px;
+        text-align-last: center;
+        width: 40px;
+
+        &:hover {
+          background-color: $keyboardSpecialButtonColor;
+        }
+
+        img {
+          margin-top: 5px;
+          width: 25px;
+        }
+      }
+    }
+
+  }
+
+}
+
+.keyboard {
+  background-color: $keyboardColor;
+  padding: 0 5px 5px 5px;
+  width: $keyboardWidth;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  font-weight: 370;
+  align-content: flex-end;
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f1f1f1;
+
+  img {
+    width: 100%;
+    height: 25px;
+    object-fit: contain;
+    pointer-events: none;
+    vertical-align: middle;
+    margin-bottom: 3px;
+  }
+
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 5px;
+    border: 2px solid #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+  }
+
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  .keyboard-button {
+    width: $keyboardButtonWidth;
+    height: $keyboardButtonHeight;
+    background-color: $keyboardButtonColor;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    margin: 3px;
+    cursor: default;
+    align-content: center;
+    position: relative;
+
+
+    &:hover:not(.button-disable,.key-button-disable) {
+      background-color: $keyboardButtonHoverColor !important;
+    }
+
+    &:active:not(.button-disable,.key-button-disable) {
+      background-color: $keyboardButtonClickColor !important;
+    }
+
+    &.keyboard-button-active:not(.button-disable,.key-button-disable) {
+      background-color: $keyboardButtonClickColor !important;
+    }
+
+    &.button-disable, &.key-button-disable {
+      img {
+        opacity: 0.2;
+      }
+
+      color: #888888;
+    }
+
+
+  }
+
+  .keyboard-button-focus {
+    background-color: $keyboardButtonHoverColor !important;
+  }
+
+  .keyboard-ctrl-button {
+    background-color: $keyboardSpecialButtonColor;
+    font-size: 17px;
+  }
+
+  .keyboard-emoji-button, .keyboard-sign-button {
+    background-color: $keyboardSpecialButtonColor;
+
+    img {
+      height: 20px;
+    }
+
+  }
+
+  .keyboard-symbols-button {
+    background-color: $keyboardSpecialButtonColor;
+    font-size: 15px;
+  }
+
+  .keyboard-letter-button {
+    background-color: $keyboardSpecialButtonColor;
+  }
+
+  .keyboard-empty-button {
+    background-color: $keyboardSpecialButtonColor;
+  }
+
+  .keyboard-left-button {
+    background-color: $keyboardSpecialButtonColor;
+  }
+
+  .keyboard-right-button {
+    background-color: $keyboardSpecialButtonColor;
+  }
+
+  .keyboard-shift-button {
+    background-color: $keyboardSpecialButtonColor;
+
+    img {
+      height: 20px;
+    }
+  }
+
+  .keyboard-divider {
+    padding: 10px;
+    background-color: $keyboardColor;
+  }
+
+  .ctrl-event-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 5px;
+    font-size: 9px;
+    z-index: 1;
+  }
+
+}
+
+#defaultKeyboard {
+
+  .keyboard-delete-button {
+    width: 40%;
+
+  }
+
+  .keyboard-enter-button {
+
+    width: 30%;
+  }
+
+  .keyboard-space-button {
+    width: 120%;
+  }
+
+}
+
+#symbolKeyboard {
+
+  .keyboard-tab-button, .keyboard-delete-button {
+    background-color: $keyboardSpecialButtonColor;
+  }
+
+  .keyboard-space-button, .keyboard-zero-button {
+    width: 55%;
+  }
+
+  .keyboard-enter-button {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 999;
+    background-color: $keyboardSpecialButtonColor;
+  }
+
+  .keyboard-prev-button, .keyboard-next-button {
+    background-color: $keyboardSpecialButtonColor;
+
+    img {
+      height: 20px;
+    }
+  }
+
+}
+
+#emojiKeyboard, #signKeyboard {
+
+  img {
+    margin-bottom: unset;
+  }
+
+  min-height: 200px;
+
+  .section-active {
+    background-color: $keyboardButtonClickColor !important;
+  }
+
+  .keyboard-row {
+    justify-content: flex-start;
+    overflow-x: auto;
+    line-height: 0;
+
+    .face-button-up-arrow {
+      display: none;
+    }
+
+    .keyboard-section-button[multiply].section-active {
+      img {
+        margin-top: -7px;
+      }
+
+      .face-button-up-arrow {
+        display: block;
+        position: relative;
+        bottom: 5px;
+
+
+        img {
+          height: 14px;
+        }
+      }
+    }
+
+
+    .keyboard-delete-button {
+      background-color: $keyboardSpecialButtonColor;
+    }
+
+
+    .keyboard-row-column {
+      width: 10%;
+
+      div {
+        width: 50px;
+        margin-bottom: 10px;
+        background-color: transparent;
+        font-size: 30px;
+        border: 1px solid transparent;
+
+        &:hover {
+          border: 1px solid #9c9c9c;
+          background-color: #b1b1b1 !important;
+
+        }
+      }
+
+
+    }
+
+  }
+
+}
+
+.emoji-colors-row {
+  display: none;
+  background-color: $keyboardColor;
+  position: absolute;
+  transform: translate(64%, -100%);
+
+  &.color-active {
+    display: flex;
+  }
+
+  div {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+
+    &.emoji-color-yellow {
+      background-color: #ffc83d;
+
+      &.color-active {
+        border: 5px solid #ffe9b1;
+
+      }
+    }
+
+    &.emoji-color-white {
+      background-color: #f7d7c4;
+
+      &.color-active {
+        border: 5px solid #fcefe7;
+      }
+    }
+
+    &.emoji-color-light {
+      background-color: #d8b094;
+
+      &.color-active {
+        border: 5px solid #efdfd4;
+      }
+    }
+
+    &.emoji-color-cream {
+      background-color: #d8b094;
+
+      &.color-active {
+        border: 5px solid #e4d3c2;
+      }
+    }
+
+    &.emoji-color-brown {
+      background-color: #8e562e;
+
+      &.color-active {
+        border: 5px solid #d2bbab;
+      }
+    }
+
+    &.emoji-color-dark {
+      background-color: #603d30;
+
+      &.color-active {
+        border: 5px solid #bfb1ac;
+      }
+    }
+
+    &.color-active {
+      width: 40px;
+      height: 40px;
+    }
+
+
+  }
+
+
+}
+
