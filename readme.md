@@ -2,6 +2,9 @@
 
 This project is a simple clone of the Windows on-screen keyboard created using HTML, CSS, and JavaScript. It replicates the basic functionality of an on-screen keyboard, allowing users to interact with it visually and simulate keyboard input.
 
+# Live Preview
+https://codepen.io/attargah/pen/JoPrKxv
+
 ## Features
 
 - **Fully interactive interface:** Each key responds to user input.
